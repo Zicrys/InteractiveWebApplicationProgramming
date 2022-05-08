@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IP_of_Internet_Applications_task3</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body class="main">
+    <header class="main-header">
+        <div class = "cont1">
+            <h1>Landing Page для новичков, изучающих JavaScript</h1>
+             <script> 
+                let name = prompt("Введите Ваше имя");
+             </script>
+        </div>
+    </header>
+    <main>
+        <div class="cont2">
+            <h2>Привет, <script>document.write(name); </script> !</h2>
+            <p>JavaScript — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript.
+                JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.
+                Основные архитектурные черты: динамическая типизация, слабая типизация, автоматическое управление памятью, прототипное программирование, функции как объекты первого класса. </p>
+        </div>
+        <div class="cont3">
+            <details><summary>Практическая работа № 1 (Типы данных. Приведение типов в JS. Циклы)</summary>
+                <div class="cont-pr1">
+                    <div class="task0">
+                        <details><summary>0) создать переменную, узнать ее тип, добавить вывод на экран текста, в зависимости от значения (if else)</summary>
+                        <code><pre>
+let name = 'Anton';
+alert(name);
+let age = 30;
+if(typeof(age) == 'number'){
+    alert(typeof(age));
+}
+else(alert('this is not number'));
+                        </code></pre>
+                        <form>
+                            <p><input id="t0" type="button" value="Запуск кода"></p>
+                            <script>
+                                t0.onclick=function(){alert("Задание 1.0.");
+                                    let name = 'Anton';
+                                    alert(name);
+                                    let age = 30;
+                                        if(typeof(age) == 'number'){
+                                            alert(typeof(age));
+                                        }
+                                        else(alert('this is not number'));
+                                };
+                            </script>
+                            </form>
+                        </details>
+                    </div>
+                    <div class="task1">
+                        <details><summary>1) запросить у пользователя знак зодиака, и в зависимости от ответа выдать всплывающее окно приветствия (вместо знака зодиака, можно запросить другие данные, предполагающие несколько вариантов ответа) (switch)</summary>
+                            <code><pre>
+let horo = String(prompt("Введите свой знак зодиака"));
+switch(horo){
+    case "Овен":
+        alert("Hello " + horo);
+        break;
+    case "Телец":
+        alert("Hello " + horo);
+        break;
+    case "Близнецы":
+        alert("Hello " + horo);
+        break;
+    case "Рак":
+        alert("Hello " + horo);
+        break;
+    case "Лев":
+        alert("Hello " + horo);
+        break;
+    case "Дева":
+        alert("Hello " + horo);
+        break;
+    case "Весы":
+        alert("Hello " + horo);
+        break;
+    case "Скорпион":
+        alert("Hello " + horo);
+        break;
+    case "Стрелец":
+        alert("Hello " + horo);
+        break;
+    case "Козерог":
+        alert("Hello " + horo);
+        break;
+    case "Водолей":
+        alert("Hello " + horo);
+        break;
+    case "Рыбы":
+        alert("Hello " + horo);
+        break;
+    default:
+        alert("Требуется вписать знак зодиака с большой буквы и на русском языке. Перезапустите код.");
+        break;
+}
+                            </code></pre>
+                            <form>
+                                <p><input id="t1" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t1.onclick=function(){alert("Задание 1.1.");
+                                        let horo = String(prompt("Задание 1.1. Введите свой знак зодиака"));
+                                        switch(horo){
+                                            case "Овен":
+                                                alert("Hello " + horo);
+                                                break;
+                                            case "Телец":
+                                                alert("Hello " + horo);
+                                                break;
+                                            case "Близнецы":
+                                                alert("Hello " + horo);
+                                                break;
+                                            case "Рак":
+                                                alert("Hello " + horo);
+                                                break;
+                                            case "Лев":
+                                                alert("Hello " + horo);
+                                                break;
+                                            case "Дева":
+                                                alert("Hello " + horo);
+                                                break;
+                                            case "Весы":
+                                                alert("Hello " + horo);
+                                                break;
+                                            case "Скорпион":
+                                                alert("Hello " + horo);
+                                                break;
+                                            case "Стрелец":
+                                                alert("Hello " + horo);
+                                                break;
+                                            case "Козерог":
+                                                alert("Hello " + horo);
+                                                break;
+                                            case "Водолей":
+                                                alert("Hello " + horo);
+                                                break;
+                                            case "Рыбы":
+                                                alert("Hello " + horo);
+                                                break;
+                                            default:
+                                                alert("Требуется вписать знак зодиака с большой буквы и на русском языке. Перезапустите код.");
+                                                break;
+                                        }
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task2">
+                        <details><summary>2) вывести все числа от 1 до 40, с использованием 3-х разных циклов</summary>
+                            <code><pre>
+let x = 1;
+while( x <= 40){
+    document.write(x + '\t');
+    ++x;
+}
+document.write('<br>');
+let x1 = 1;
+for(;x1 <= 40; ++x1){
+    document.write(x1 + '\t');
+}
+document.write('<br>');
+let x2 = 0;
+do {
+    ++x2;
+    document.write(x2 + '\t');
+} 
+while(x2 < 40){
+}
+                            </code></pre>
+                            <form>
+                                <p><input id="t3" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t3.onclick=function(){alert("Задание 1.2.");
+                                        document.write("Задание 1.2." + '<br>');
+                                        let x = 1;
+                                        while( x <= 40){
+                                            document.write(x + '\t');
+                                            ++x;
+                                        }
+                                        document.write('<br>');
+                                        let x1 = 1;
+                                        for(;x1 <= 40; ++x1){
+                                            document.write(x1 + '\t');
+                                        }
+                                        document.write('<br>');
+                                        let x2 = 0;
+                                        do {
+                                            ++x2;
+                                            document.write(x2 + '\t');
+                                        } 
+                                        while(x2 < 40){
+                                        }
+                                        document.write('<br>');
+                                        document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                        setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task3">
+                        <details><summary>3) создайте вирусную страницу с постоянно повторяющемся сообщением</summary>
+                            <code><pre>
+while(true){
+    alert("ВИРУСНАЯ СТРАНИЦА!");
+}
+                            </code></pre>
+                            <form>
+                                <p><input id="t3" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t3.onclick=function(){alert("Задание 1.3.");
+                                        while(true){
+                                            alert("ВИРУСНАЯ СТРАНИЦА!");
+                                        }
+                                        setTimeout(function(){window.location.href = 'index.html';}, 5 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task4">
+                        <details><summary>4) Запросить у пользователя любое число больше 5, в случае правильного ответа выдать окошко с поздравлением, в случае неправильного ответа вывести повторное окно с вопросом (помните, что пользователь может нажать "отмена", помните о типах данных)</summary>
+                            <code><pre>
+nu = 0;
+while(nu <= 5){
+    nu = Number(prompt("Задание 1.4. Введите любое число больше 5"));
+    if(nu > 5){
+        alert("Поздравляю, вы выполнили задание!");
+        break;
+    }
+    else 
+        alert("ОШИБКА!");
+        continue;
+}
+                            </code></pre>
+                            <form>
+                                <p><input id="t4" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t4.onclick=function(){alert("Задание 1.4.");
+                                        nu = 0;
+                                        while(nu <= 5){
+                                            nu = Number(prompt("Задание 1.4. Введите любое число больше 5"));
+                                            if(nu > 5){
+                                                alert("Поздравляю, вы выполнили задание!");
+                                                break;
+                                            }
+                                            else 
+                                                alert("ОШИБКА!");
+                                                continue;
+                                        }
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task5">
+                        <details><summary>5) выведите четные числа от 8 до 20</summary>
+                            <code><pre>
+evenNum = 8;
+for(;evenNum <= 20; evenNum++){
+    if(evenNum % 2 == 0){
+        document.write(evenNum + '\t');
+    }
+}
+                            </code></pre>
+                            <form>
+                                <p><input id="t5" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t5.onclick=function(){alert("Задание 1.5.");
+                                        document.write("Задание 1.5." + '<br>');
+                                        evenNum = 8;
+                                        for(;evenNum <= 20; evenNum++){
+                                            if(evenNum % 2 == 0){
+                                                document.write(evenNum + '\t');
+                                            }
+                                        }
+                                        document.write('<br>');
+                                        document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                        setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task6">
+                        <details><summary>6) выведите нечетные числа от 1 до 7, пропустив 5</summary>
+                            <code><pre>
+oddNum = 1;
+for(;oddNum <= 7; oddNum++){
+    if(oddNum % 2 != 0 && oddNum != 5){
+        document.write(oddNum + '\t');
+    }
+}
+                            </code></pre>
+                            <form>
+                                <p><input id="t6" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t6.onclick=function(){alert("Задание 1.6.");
+                                        document.write("Задание 1.6." + '<br>');
+                                        oddNum = 1;
+                                        for(;oddNum <= 7; oddNum++){
+                                            if(oddNum % 2 != 0 && oddNum != 5){
+                                                document.write(oddNum + '\t');
+                                            }
+                                        }
+                                        document.write('<br>');
+                                        document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                        setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                </div>
+            </details>
+        </div>
+        <div class="cont4">
+            <details><summary>Практическая работа № 2 (Массивы. Функции)</summary>
+                <div class="cont-pr1">
+                    <div class="task2-1">
+                        <details><summary>1) создать массив 3 разными способами</summary>
+                            <code><pre>
+arr = new Array();
+arr[0] = "Auto";
+arr[1] = "Microwave";
+arr[2] = "Washing machine";
+arr[3] = "Vacuum cleaner";
+
+let arr2 = new Array("Auto", "Microwave", "Washing machine", "Vacuum cleaner", "Television", "Computer");
+
+let arr3 = ["Auto", "Microwave", "Washing machine", "Vacuum cleaner"];
+                            </code></pre>
+                            <form>
+                                <p><input id="t21" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t21.onclick=function(){alert("Задание 2.1.");
+                                        arr = new Array();
+                                        arr[0] = "Auto";
+                                        arr[1] = "Microwave";
+                                        arr[2] = "Washing machine";
+                                        arr[3] = "Vacuum cleaner";
+
+                                        let arr2 = new Array("Auto", "Microwave", "Washing machine", "Vacuum cleaner", "Television", "Computer");
+
+                                        let arr3 = ["Auto", "Microwave", "Washing machine", "Vacuum cleaner"];
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task2-2">
+                        <details><summary>2) выведите на экран 5 член вашего массива затем измените его значение</summary>
+                            <code><pre>
+arr2[5] = ["Refrigerator"];
+                            </code></pre>
+                            <form>
+                                <p><input id="t22" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t22.onclick=function(){alert("Задание 2.2.");
+                                        document.write("Задание 2.2." + '<br>');
+                                        let arr2 = new Array("Auto", "Microwave", "Washing machine", "Vacuum cleaner", "Television", "Computer");
+                                        arr2[5] = ["Refrigerator"];
+                                        document.write(arr2[5] + '<br>');
+                                        document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                        setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task2-3">
+                        <details><summary>3) узнайте длину вашего массива и выведите ее значение при наведении на любой элемент</summary>
+                            <code><pre>
+document.write(arr2.length);
+                            </code></pre>
+                            <form>
+                                <p><input id="t23" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t23.onclick=function(){alert("Задание 2.3.");
+                                        document.write("Задание 2.3." + '<br>');
+                                        let arr2 = new Array("Auto", "Microwave", "Washing machine", "Vacuum cleaner", "Television", "Refrigerator");
+                                        document.write(arr2.length + '<br>');
+                                        document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                        setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task2-4">
+                        <details><summary>4) выведите все элементы массива, используя цикл for</summary>
+                            <code><pre>
+for(let i=0; i < arr2.length; ++i){
+    document.write(arr2[i] + '\t');
+}
+                            </code></pre>
+                            <form>
+                                <p><input id="t24" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t24.onclick=function(){alert("Задание 2.4.");
+                                        document.write("Задание 2.4." + '<br>');
+                                        let arr2 = new Array("Auto", "Microwave", "Washing machine", "Vacuum cleaner", "Television", "Refrigerator");
+                                        for(let i=0; i < arr2.length; ++i){
+                                            document.write(arr2[i] + '\t');
+                                        }
+                                        document.write('<br>');
+                                        document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                        setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task2-5">
+                        <details><summary>5) создайте 2 массива. Объедините их в один и выведите на экран полученный массив</summary>
+                            <code><pre>
+let arr4 = arr2.concat(arr3);
+for(let i=0; i < arr4.length; ++i){
+    document.write(arr4[i] + '\t');
+}
+                            </code></pre>
+                            <form>
+                                <p><input id="t25" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t25.onclick=function(){alert("Задание 2.5.");
+                                        document.write("Задание 2.5." + '<br>');
+                                        let arr2 = new Array("Auto", "Microwave", "Washing machine", "Vacuum cleaner", "Television", "Refrigerator");
+                                        let arr3 = ["Auto", "Microwave", "Washing machine", "Vacuum cleaner"];
+                                        let arr4 = arr2.concat(arr3);
+                                        for(let i=0; i < arr4.length; ++i){
+                                            document.write(arr4[i] + '\t');
+                                        }
+                                        document.write('<br>');
+                                        document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                        setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task2-6">
+                        <details><summary>6) Удалите последний член получившегося массива и выведите это значение на экран</summary>
+                            <code><pre>
+arrEl = arr4.pop();
+                            </code></pre>
+                            <form>
+                                <p><input id="t26" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t26.onclick=function(){alert("Задание 2.6.");
+                                        document.write("Задание 2.6." + '<br>');
+                                        let arr2 = new Array("Auto", "Microwave", "Washing machine", "Vacuum cleaner", "Television", "Refrigerator");
+                                        let arr3 = ["Auto", "Microwave", "Washing machine", "Vacuum cleaner"];
+                                        let arr4 = arr2.concat(arr3);
+                                        arrEl = arr4.pop();
+                                        document.write(arrEl + '<br>');
+                                        document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                        setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task2-7">
+                        <details><summary>7) Удалите последний член получившегося массива и выведите это значение на экран</summary>
+                            <code><pre>
+arrE2 = arr4.pop();
+                            </code></pre>
+                            <form>
+                                <p><input id="t27" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t27.onclick=function(){alert("Задание 2.7.");
+                                    document.write("Задание 2.7." + '<br>');
+                                        let arr2 = new Array("Auto", "Microwave", "Washing machine", "Vacuum cleaner", "Television", "Refrigerator");
+                                        let arr3 = ["Auto", "Microwave", "Washing machine", "Vacuum cleaner"];
+                                        let arr4 = arr2.concat(arr3);
+                                        arrEl = arr4.pop();
+                                        arrE2 = arr4.pop();
+                                        document.write(arrE2 + '<br>');
+                                        document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                        setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task2-8">
+                        <details><summary>8) Добавьте новый элемент в начало вашего объединенного массива</summary>
+                            <code><pre>
+arr4.unshift("Monitor");
+                            </code></pre>
+                            <form>
+                                <p><input id="t28" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t28.onclick=function(){alert("Задание 2.8.");
+                                        document.write("Задание 2.8." + '<br>');
+                                        let arr2 = new Array("Auto", "Microwave", "Washing machine", "Vacuum cleaner", "Television", "Refrigerator");
+                                        let arr3 = ["Auto", "Microwave", "Washing machine", "Vacuum cleaner"];
+                                        let arr4 = arr2.concat(arr3);
+                                        arr4.unshift("Monitor");
+                                        document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                        setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task2-9">
+                        <details><summary>9) Получите сегодняшнюю дату и выведите ее на экран</summary>
+                            <code><pre>
+let nowDate = new Date();
+document.write(nowDate);
+                            </code></pre>
+                            <form>
+                                <p><input id="t29" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t29.onclick=function(){alert("Задание 2.9.");
+                                        document.write("Задание 2.9." + '<br>');
+                                        let nowDate = new Date();
+                                        document.write(nowDate + '<br>');
+                                        document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                        setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task2-10">
+                        <details><summary>10) Выведите сегодняшнюю дату в формате 11 ноября 2020 года</summary>
+                            <code><pre>
+let nowDate2 = new Date();
+let year = String(nowDate2.getFullYear());
+let month = nowDate2.getMonth() + 1;
+let day = String(nowDate2.getDate());
+let monthStr = "";
+switch(month){
+    case 1:
+        monthStr = "января";
+        break;
+    case 2:
+        monthStr = "февраля";
+        break;
+    case 3:
+        monthStr = "марта";
+        break;
+    case 4:
+        monthStr = "апреля";
+        break;
+    case 5:
+        monthStr = "мая";
+        break;
+    case 6:
+        monthStr = "июня";
+        break;
+    case 7:
+        monthStr = "июля";
+        break;
+    case 8:
+        monthStr = "августа";
+        break;
+    case 9:
+        monthStr = "сентября";
+        break;
+    case 10:
+        monthStr = "октября";
+        break;
+    case 11:
+        monthStr = "ноября";
+        break;
+    case 12:
+        monthStr = "декабря";
+        break;
+}
+if(day < 10){
+    document.write('0' + day + ' ' + monthStr + ' ' + year + ' года');
+}
+                            </code></pre>
+                            <form>
+                                <p><input id="t210" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t210.onclick=function(){alert("Задание 2.10.");
+                                    document.write("Задание 2.10." + '<br>');
+                                    let nowDate2 = new Date();
+                                    let year = String(nowDate2.getFullYear());
+                                    let month = nowDate2.getMonth() + 1;
+                                    let day = String(nowDate2.getDate());
+                                    let monthStr = "";
+                                    switch(month){
+                                        case 1:
+                                            monthStr = "января";
+                                            break;
+                                        case 2:
+                                            monthStr = "февраля";
+                                            break;
+                                        case 3:
+                                            monthStr = "марта";
+                                            break;
+                                        case 4:
+                                            monthStr = "апреля";
+                                            break;
+                                        case 5:
+                                            monthStr = "мая";
+                                            break;
+                                        case 6:
+                                            monthStr = "июня";
+                                            break;
+                                        case 7:
+                                            monthStr = "июля";
+                                            break;
+                                        case 8:
+                                            monthStr = "августа";
+                                            break;
+                                        case 9:
+                                            monthStr = "сентября";
+                                            break;
+                                        case 10:
+                                            monthStr = "октября";
+                                            break;
+                                        case 11:
+                                            monthStr = "ноября";
+                                            break;
+                                        case 12:
+                                            monthStr = "декабря";
+                                            break;
+                                    }
+                                    if(day < 10){
+                                        document.write('0' + day + ' ' + monthStr + ' ' + year + ' года');
+                                    }
+                                    document.write('<br>');
+                                    document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                    setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                    <div class="task2-11">
+                        <details><summary>11) напишите функцию, подсчитывающую произведение двух случайных чисел в промежутке от нуля до 50</summary>
+                            <code><pre>
+function prodRandomNum(min, max){
+    return Math.floor(Math.random() * (max-min + 1)) + min;
+}
+document.write(prodRandomNum(0, 50));
+                            </code></pre>
+                            <form>
+                                <p><input id="t211" type="button" value="Запуск кода"></p>
+                                <script>
+                                    t211.onclick=function(){alert("Задание 2.11.");
+                                        function prodRandomNum(min, max){
+                                            return Math.floor(Math.random() * (max-min + 1)) + min;
+                                        }
+                                        document.write(prodRandomNum(0, 50) + '<br>');
+                                        document.write("Вы будете перенаправлены на начальную страницу через 3 сек.");
+                                        setTimeout(function(){window.location.href = 'index.html';}, 3 * 1000);
+                                    };
+                                </script>
+                                </form>
+                            </details>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class = "questionBlock">
+            1. К какому типу относится язык программирования JavaScript?<br>
+             <input type = "radio" name=q1 onclick="qa.nowRight = 0">a) Строго типизированный<br>
+             <input type = "radio" name=q1 onclick="qa.nowRight = 1">b) Динамически типизированный<br>
+             <input type = "radio" name=q1 onclick="qa.nowRight = 0">c) Не типизированный<br>
+             <input type = "radio" name=q1 onclick="qa.nowRight = 0">d)	Другое<br> 
+         </div>
+         <div class = "questionBlock">
+            2. Для чего был придуман язык JavaScript?<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">a) Разработка игр<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">b) Системное программирование<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">c) Язык запросов<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 1">d) Язык сценариев для веб-страниц<br>
+         </div>
+         <div class = "questionBlock">
+            3. Как объявить в коде JavaScript?<br>
+             <input type = "radio" name=q3 onclick="qa.nowRight = 1">a) script/script<br>
+             <input type = "radio" name=q3 onclick="qa.nowRight = 0">b) javascript/javascript<br>
+             <input type = "radio" name=q3 onclick="qa.nowRight = 0">c) без тега<br>
+             <input type = "radio" name=q3 onclick="qa.nowRight = 0">d) code/code<br>
+         </div>
+         <div class = "questionBlock">
+            4. Что делает метод alert()?<br>
+             <input type = "radio" name=q4 onclick="qa.nowRight = 0">a) Выводит текст в документ<br>
+             <input type = "radio" name=q4 onclick="qa.nowRight = 1">b) Выводит окно с текстом<br>
+             <input type = "radio" name=q4 onclick="qa.nowRight = 0">c) Выводит текст в терминал<br>
+             <input type = "radio" name=q4 onclick="qa.nowRight = 0">d) Возвращает текст в обратном порядке<br>
+         </div>
+         <div class = "questionBlock">
+            5. К какому стилю относится язык JavaScript?<br>
+             <input type = "radio" name=q4 onclick="qa.nowRight = 0">a) Объектно-ориентированный<br>
+             <input type = "radio" name=q4 onclick="qa.nowRight = 0">b) Императивный<br>
+             <input type = "radio" name=q4 onclick="qa.nowRight = 0">c) Функциональный<br>
+             <input type = "radio" name=q4 onclick="qa.nowRight = 1">d) Все варианты<br>
+         </div>
+         <div class = "questionBlock">
+            6. Как объявить строковую переменную x в JavaScript?<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">a) String let x;<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">b) let x;<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 1">c) x = “”;<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">d) String x;<br>
+         </div>
+         <div class = "questionBlock">
+            7. Что делает метод Math.random()?<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">a)	Выводит случайное число от 0 до 1<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 1">b)	Выводит псевдослучайное число от 0 до 1<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">c)	Выводит случайное число<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">d)	Выводит псевдослучайное число из заданного диапазона<br>
+         </div>
+         <div class = "questionBlock">
+            8. Что делает метод pop();?<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 1">a)	Удаляет последний элемент массива<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">b)	Удаляет массив<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">c)	Выводит последний элемент массива на экран<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">d)	Удаляет первый элемент массива<br>
+         </div>
+         <div class = "questionBlock">
+            9. Как объявить функцию в JavaScript?<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">a)	def();<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 1">b)	function(){};<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">c)	int foo(a, b){}<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">d)	func(){}<br>
+         </div>
+         <div class = "questionBlock">
+             10. Что означает ключевое слово break;?<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">a)	Выход из функции<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 1">b)	Выход из цикла<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">c)	Удаляет массив<br>
+             <input type = "radio" name=q2 onclick="qa.nowRight = 0">d)	Удаляет элемент массива<br>
+         </div>
+         <input type="button" value="Ответить"  onclick="qa.nextOrResult()"> 
+         <script type = "text/javascript">
+             var qa = new QuestAnalizer();
+             function QuestAnalizer() {
+                 var now = 0, printed = false, rightCount = 0;
+                 var questionBlocks = document.querySelectorAll("div.questionBlock");
+                 var allQCount = questionBlocks.length;
+                 this.nowRight = 0;
+                 questionBlocks[now].style.display = "block";
+                 this.nextOrResult = function () {
+                     if (now >= allQCount-1) {
+                         now++;
+                         if (!printed) {
+                             questionBlocks[now - 1].style.display = "none"
+                             var p = document.createElement("p");
+                             p.innerHTML = "Верных ответов " + rightCount + ". Вы набрали " + (rightCount / allQCount * 100).toFixed(0) + "%";
+                             document.body.appendChild(p);
+                             printed = true;
+                         } else {
+                             alert("Ваш результат на экране.");
+                         }
+                     } else {
+                         questionBlocks[now].style.display = "none";
+                         now++;
+                         rightCount += this.nowRight;
+                         questionBlocks[now].style.display = "block";
+                     }
+                 }
+             }
+             
+         </script>
+    </footer>
+</body>
+</html>
